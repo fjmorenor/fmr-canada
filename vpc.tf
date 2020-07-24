@@ -16,7 +16,7 @@ resource "aws_eip" "web-1" {
   vpc      = true
 }
 
-resource "aws_route_table" "ca-central-1-public" {
+resource "aws_route_table" "ca-central-1a-public" {
   vpc_id = aws_vpc.main_vpc.id
 
   route {
@@ -29,12 +29,12 @@ resource "aws_route_table" "ca-central-1-public" {
   }
 }
 
-resource "aws_route_table_association" "ca-central-1-public" {
-  subnet_id      = aws_subnet.ca-central-1b-public.id
-  route_table_id = aws_route_table.ca-central-1-public.id
+resource "aws_route_table_association" "ca-central-1a-public" {
+  subnet_id      = aws_subnet.ca-central-1a-public.id
+  route_table_id = aws_route_table.ca-central-1a-public.id
 }
 
-resource "aws_route_table" "ca-central-1-private" {
+resource "aws_route_table" "ca-central-1a-private" {
   vpc_id = aws_vpc.main_vpc.id
 
   route {
@@ -47,23 +47,23 @@ resource "aws_route_table" "ca-central-1-private" {
   }
 }
 
-resource "aws_route_table_association" "ca-central-1-private" {
-  subnet_id      = aws_subnet.ca-central-1-private.id
-  route_table_id = aws_route_table.ca-central-1-private.id
+resource "aws_route_table_association" "ca-central-1a-private" {
+  subnet_id      = aws_subnet.ca-central-1a-private.id
+  route_table_id = aws_route_table.ca-central-1a-private.id
 }
 
-resource "aws_subnet" "ca-central-1-public" {
+resource "aws_subnet" "ca-central-1a-public" {
   vpc_id = aws_vpc.main_vpc.id
 
   cidr_block        = var.public_subnet_cidr
-  availability_zone = "ca-central-1"
+  availability_zone = "ca-central-1a"
 
   tags = {
     Name = "Public Subnet"
   }
 }
 
-resource "aws_subnet" "ca-central-1-private" {
+resource "aws_subnet" "ca-central-1a-private" {
   vpc_id = aws_vpc.main_vpc.id
 
   cidr_block        = var.private_subnet_cidr
