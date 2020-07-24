@@ -3,7 +3,7 @@ variable "aws_key_path" {
 }
 
 variable "aws_key_name" {
-  default = "fmr-canada"
+  default = "/home/usuario/Descargas/fmr-canada.pem"
 }
 
 variable "aws_region" {
@@ -14,7 +14,7 @@ variable "aws_region" {
 variable "amis" {
   description = "AMIs por region"
   default = {
-    eu-west-1 = "ami-05de9e98f3bef5e8a"
+    eu-west-1 = "ami-0346ee471bb2c892a"
   }
 }
 
