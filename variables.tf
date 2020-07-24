@@ -1,9 +1,9 @@
 variable "aws_key_path" {
-  default = "fm-canada.pem"
+  default = "/home/usuario/Descargas/fm-canada.pem"
 }
 
 variable "aws_key_name" {
-  default = "/home/usuario/Descargas/fmr-canada.pem"
+  default = "fmr-canada"
 }
 
 variable "aws_region" {
