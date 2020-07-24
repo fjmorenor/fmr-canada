@@ -31,7 +31,7 @@ resource "aws_route_table" "ca-central-1-public" {
 
 resource "aws_route_table_association" "ca-central-1-public" {
   subnet_id      = aws_subnet.ca-central-1a-public.id
-  route_table_id = aws_route_table.ca-central-1a-public.id
+  route_table_id = aws_route_table.ca-central-1-public.id
 }
 
 resource "aws_route_table" "ca-central-1-private" {
