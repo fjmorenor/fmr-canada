@@ -52,7 +52,7 @@ resource "aws_route_table_association" "ca-central-1-private" {
   route_table_id = aws_route_table.ca-central-1-private.id
 }
 
-resource "aws_subnet" "ca-central-1a-public" {
+resource "aws_subnet" "ca-central-1b-public" {
   vpc_id = aws_vpc.main_vpc.id
 
   cidr_block        = var.public_subnet_cidr
@@ -63,7 +63,7 @@ resource "aws_subnet" "ca-central-1a-public" {
   }
 }
 
-resource "aws_subnet" "ca-central-1a-private" {
+resource "aws_subnet" "ca-central-1b-private" {
   vpc_id = aws_vpc.main_vpc.id
 
   cidr_block        = var.private_subnet_cidr
