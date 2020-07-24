@@ -34,7 +34,7 @@ resource "aws_instance" "db-1" {
   instance_type          = "t2.micro"
   key_name               = var.aws_key_name
   vpc_security_group_ids = [aws_security_group.db.id]
-  subnet_id              = aws_subnet.ca-central-1b-private.id
+  subnet_id              = aws_subnet.ca-central-1-private.id
   associate_public_ip_address = true
   source_dest_check      = false
 
