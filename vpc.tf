@@ -63,7 +63,7 @@ resource "aws_subnet" "ca-central-1a-public" {
   }
 }
 
-resource "aws_subnet" "ca-central-1-private" {
+resource "aws_subnet" "ca-central-1a-private" {
   vpc_id = aws_vpc.main_vpc.id
 
   cidr_block        = var.private_subnet_cidr
