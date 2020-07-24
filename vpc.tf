@@ -29,12 +29,12 @@ resource "aws_route_table" "ca-central-1-public" {
   }
 }
 
-resource "aws_route_table_association" "eu-west-1a-public" {
-  subnet_id      = aws_subnet.eu-west-1a-public.id
-  route_table_id = aws_route_table.eu-west-1a-public.id
+resource "aws_route_table_association" "ca-central-1-public" {
+  subnet_id      = aws_subnet.ca-central-1-public.id
+  route_table_id = aws_route_table.ca-central-1-public.id
 }
 
-resource "aws_route_table" "eu-west-1a-private" {
+resource "aws_route_table" "ca-central-1-private" {
   vpc_id = aws_vpc.main_vpc.id
 
   route {
