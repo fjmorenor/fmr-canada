@@ -67,7 +67,7 @@ resource "aws_subnet" "ca-central-1a-private" {
   vpc_id = aws_vpc.main_vpc.id
 
   cidr_block        = var.private_subnet_cidr
-  availability_zone = "ca-central-1"
+  availability_zone = "ca-central-1a"
 
   tags = {
     Name = "Private Subnet"
