@@ -3,7 +3,7 @@ variable "aws_key_path" {
 }
 
 variable "aws_key_name" {
-  default = "fmr-canada"
+  default = "fm-canada"
 }
 
 variable "aws_region" {
